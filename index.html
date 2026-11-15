@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10091f">
+<title>ReportCheats — Premium Game Tools</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Inter','ui-sans-serif','system-ui']}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--violet:#a879ff;--line:rgba(255,255,255,.12);--glass:rgba(22,15,38,.62)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#0a0712;color:#f8f5ff;font-family:Inter,system-ui,sans-serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 18% 4%,#542b83 0,transparent 34%),radial-gradient(ellipse at 88% 18%,#34206d 0,transparent 34%),radial-gradient(ellipse at 50% 90%,#26133e 0,transparent 40%),linear-gradient(135deg,#0a0712,#10091c 55%,#080610)}
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
+.glass{background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(24px) saturate(170%);-webkit-backdrop-filter:blur(24px) saturate(170%);box-shadow:0 24px 70px #0005}
+.shell{width:min(1180px,calc(100% - 40px));margin:auto}
+.topbar{position:sticky;top:0;z-index:30;background:rgba(12,8,20,.72);backdrop-filter:blur(30px) saturate(180%);border-bottom:1px solid #ffffff12}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.7px;font-size:19px}.brand-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:14px;background:linear-gradient(145deg,#d1aaff,#8048e6);color:white;box-shadow:0 8px 28px #9b5bff55}
+.navlink{font-size:13px;color:#c5b8d8;transition:.2s}.navlink:hover{color:white}
+.pill{border:1px solid #ffffff1d;background:#ffffff0a;border-radius:999px;padding:10px 15px;font-size:12px;color:#eee7fa}
+.btn-purple{background:linear-gradient(135deg,#c18aff,#874ce8);color:white;border:1px solid #ffffff25;box-shadow:0 9px 30px #8e4ee944;transition:.2s}.btn-purple:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.hero{padding:48px 0 34px}.hero-panel{min-height:360px;border-radius:30px;position:relative;overflow:hidden;background:linear-gradient(110deg,rgba(16,9,29,.98) 0%,rgba(33,16,57,.86) 48%,rgba(75,39,119,.45) 100%);border:1px solid #ffffff20;box-shadow:0 30px 90px #0005}
+.hero-panel:before{content:"";position:absolute;width:430px;height:430px;right:2%;top:-40%;border-radius:50%;background:radial-gradient(circle,#b87cff66,transparent 65%);filter:blur(12px)}
+.hero-panel:after{content:"";position:absolute;width:270px;height:270px;right:16%;bottom:-55%;border-radius:50%;border:1px solid #d8baff38;box-shadow:0 0 0 35px #d8baff09,0 0 0 70px #d8baff06}
+.hero-copy{position:relative;z-index:1;max-width:650px;padding:52px 54px}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid #c18aff44;background:#a56bff18;border-radius:999px;color:#e0caff;font-size:10px;letter-spacing:1.5px;font-weight:800}.spark{width:6px;height:6px;border-radius:50%;background:#c79bff;box-shadow:0 0 12px #c79bff}
+h1{font-size:clamp(42px,6vw,68px);line-height:1.02;letter-spacing:-3.6px;margin:22px 0 16px;font-weight:800}.grad{background:linear-gradient(95deg,#fff 0%,#e2caff 42%,#a36aff 95%);background-clip:text;color:transparent}
+.hero-desc{max-width:510px;color:#b9accb;font-size:14px;line-height:1.8}.hero-art{position:absolute;right:7%;top:50%;transform:translateY(-50%);width:290px;height:250px;z-index:1;display:grid;place-items:center}
+.orb{position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e6d3ff,#a46aff 30%,#5829a8 65%,#211033 80%);box-shadow:inset -18px -25px 45px #120822aa,0 0 75px #a56bff55}
+.orb:before,.orb:after{content:"";position:absolute;inset:-25px;border:1px solid #d8bdff55;border-radius:50%;transform:rotateX(65deg) rotateZ(-25deg)}.orb:after{inset:-45px;transform:rotateX(65deg) rotateZ(35deg);opacity:.5}
+.art-tag{position:absolute;z-index:2;padding:12px 15px;border-radius:15px;background:#ffffff13;border:1px solid #ffffff2a;backdrop-filter:blur(18px);font-size:11px;box-shadow:0 15px 40px #0005}.art-tag.one{top:30px;right:0}.art-tag.two{bottom:25px;left:0}
+.searchbar{display:flex;align-items:center;gap:12px;padding:13px 16px;border-radius:18px}.searchbar input{width:100%;background:transparent;outline:none;color:white;font-size:13px}.searchbar input::placeholder{color:#9689a8}
+.section-label{font-size:22px;font-weight:750;letter-spacing:-.8px}.subtle{color:#a99db9;font-size:12px}
+.category{border:1px solid #ffffff17;background:#ffffff08;border-radius:13px;padding:10px 15px;font-size:12px;color:#cfc3de;transition:.2s}.category.active,.category:hover{background:#a56bff2c;border-color:#b98aff66;color:white}
+.product-card{border-radius:23px;overflow:hidden;transition:transform .25s,border-color .25s;position:relative}.product-card:hover{transform:translateY(-5px);border-color:#bd8aff77}
+.product-visual{height:150px;position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(135deg,#26153d,#49246f 55%,#171027)}
+.product-visual:before{content:"";position:absolute;width:190px;height:190px;border:1px solid #ffffff22;border-radius:50%;box-shadow:0 0 0 25px #ffffff08,0 0 0 50px #ffffff05}
+.product-visual:after{content:"";position:absolute;width:110px;height:110px;border-radius:30px;transform:rotate(35deg);background:linear-gradient(145deg,#d4b2ff55,#8246dd22);border:1px solid #e0caff55;backdrop-filter:blur(4px);box-shadow:0 20px 50px #0004}
+.product-visual .glyph{z-index:1;font-size:42px;text-shadow:0 8px 30px #0008}
+.visual-blue{background:linear-gradient(135deg,#151b3b,#343c85 55%,#171027)}.visual-pink{background:linear-gradient(135deg,#36172f,#823b85 55%,#21102d)}.visual-cyan{background:linear-gradient(135deg,#102c3b,#28627d 55%,#101d31)}
+.product-body{padding:19px}.product-title{font-size:15px;font-weight:700}.product-desc{font-size:11px;line-height:1.65;color:#a99db9;min-height:36px;margin-top:7px}.meta{font-size:10px;color:#bfaed3;background:#ffffff09;border:1px solid #ffffff13;border-radius:7px;padding:5px 8px}.product-price{font-size:20px;font-weight:800;letter-spacing:-.7px}
+.cart-drawer{position:fixed;z-index:60;inset:0 0 0 auto;width:min(390px,100%);background:rgba(19,12,31,.91);border-left:1px solid #ffffff20;backdrop-filter:blur(35px);box-shadow:-20px 0 80px #0007;transform:translateX(110%);transition:transform .3s;padding:24px;display:flex;flex-direction:column}
+.cart-drawer.open{transform:translateX(0)}.scrim{position:fixed;inset:0;background:#0008;z-index:50;opacity:0;pointer-events:none;transition:.3s}.scrim.show{opacity:1;pointer-events:auto}
+.cart-line{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid #ffffff12;font-size:12px}
+footer{border-top:1px solid #ffffff13;color:#9489a5;font-size:11px}
+@media(max-width:760px){.hero-art{opacity:.35;right:-5%;transform:translateY(-50%) scale(.8)}.hero-copy{padding:42px 28px}.hero-panel{min-height:350px}.desktop-nav{display:none}}
+@media(max-width:520px){.shell{width:calc(100% - 26px)}h1{letter-spacing:-2.2px}.hero{padding-top:25px}.hero-copy{padding:35px 22px}.hero-art{right:-90px;opacity:.22}.product-visual{height:130px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+ <div class="shell flex h-[72px] items-center justify-between gap-4">
+  <a class="brand" href="#"><span class="brand-icon">✦</span><span>reportcheats<span class="text-violet-300">.com</span></span></a>
+  <nav class="desktop-nav flex items-center gap-8"><a class="navlink" href="#store">Store</a><a class="navlink" href="#why">Why ReportCheats</a><a class="navlink" href="#support">Support</a></nav>
+  <button id="openCart" class="pill hover:bg-white/15">Bag <span id="cartCount" class="ml-1 rounded-full bg-violet-500 px-2 py-0.5 text-white">0</span>　↗</button>
+ </div>
+</header>
+<main class="shell">
+ <section class="hero">
+  <div class="hero-panel">
+   <div class="hero-copy">
+    <div class="eyebrow"><span class="spark"></span> REPORTCHEATS DIGITAL STORE</div>
+    <h1>Upgrade your<br><span class="grad">game.</span></h1>
+    <p class="hero-desc">Premium gaming tools, private releases and carefully selected digital products. Find your next advantage in one place.</p>
+    <div class="mt-7 flex flex-wrap gap-3"><a href="#store" class="btn-purple rounded-xl px-5 py-3 text-xs font-bold">Browse products&nbsp; →</a><a href="#why" class="rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-xs font-semibold text-white hover:bg-white/10">About the store</a></div>
+    <div class="mt-7 flex flex-wrap gap-5 text-[10px] text-violet-100/55"><span>✦ Digital delivery</span><span>✦ Product updates</span><span>✦ Support included</span></div>
+   </div>
+   <div class="hero-art"><div class="orb"></div><div class="art-tag one">✧ PREMIUM ACCESS</div><div class="art-tag two">● DIGITAL RELEASES</div></div>
+  </div>
+ </section>
+ <section id="store" class="pb-16">
+  <div class="mb-5 flex flex-wrap items-end justify-between gap-4">
+   <div><div class="section-label">Explore the store</div><div class="subtle mt-1">Find tools for your setup.</div></div>
+   <div class="flex items-center gap-2"><span class="text-xs text-violet-100/50">CATALOG</span><span class="rounded-full border border-violet-300/25 bg-violet-400/10 px-3 py-1.5 text-[10px] text-violet-200">✧ FEATURED RELEASES</span></div>
+  </div>
+  <div class="glass searchbar mb-5"><span class="text-violet-200">⌕</span><input id="search" placeholder="Search products..." autocomplete="off"><span class="hidden text-[10px] text-violet-100/40 sm:block">REPORTCHEATS / STORE</span></div>
+  <div class="mb-6 flex flex-wrap gap-2" id="filters"><button class="category active" data-filter="all">All products</button><button class="category" data-filter="utility">Utilities</button><button class="category" data-filter="visual">Visuals</button><button class="category" data-filter="config">Configs</button></div>
+  <div id="products" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+   <article class="product-card glass" data-category="utility" data-name="Phantom Utility">
+    <div class="product-visual"><span class="glyph">◈</span><span class="absolute left-4 top-4 rounded-full border border-white/20 bg-black/20 px-2.5 py-1 text-[9px] font-bold tracking-wider">FEATURED</span></div>
+    <div class="product-body"><div class="flex items-center justify-between"><h3 class="product-title">Phantom Utility</h3><span class="text-[9px] text-violet-200">POPULAR</span></div><p class="product-desc">A digital utility package with a clean setup guide and product updates.</p><div class="mt-3 flex gap-2"><span class="meta">Digital</span><span class="meta">Setup guide</span></div><div class="mt-5 flex items-center justify-between border-t border-white/10 pt-4"><div class="product-price">$9.99 <small class="text-[10px] font-medium text-violet-100/40">CAD</small></div><button class="add btn-purple rounded-xl px-3 py-2.5 text-[10px] font-bold" data-name="Phantom Utility" data-price="9.99">Add to bag +</button></div></div>
+   </article>
+   <article class="product-card glass" data-category="visual" data-name="Prism Visuals">
+    <div class="product-visual visual-pink"><span class="glyph">✧</span><span class="absolute left-4 top-4 rounded-full border border-white/20 bg-black/20 px-2.5 py-1 text-[9px] font-bold tracking-wider">NEW DROP</span></div>
+    <div class="product-body"><div class="flex items-center justify-between"><h3 class="product-title">Prism Visuals</h3><span class="text-[9px] text-violet-200">NEW</span></div><p class="product-desc">A visual customization pack for supported games and compatible setups.</p><div class="mt-3 flex gap-2"><span class="meta">Customization</span><span class="meta">Digital</span></div><div class="mt-5 flex items-center justify-between border-t border-white/10 pt-4"><div class="product-price">$14.99 <small class="text-[10px] font-medium text-violet-100/40">CAD</small></div><button class="add btn-purple rounded-xl px-3 py-2.5 text-[10px] font-bold" data-name="Prism Visuals" data-price="14.99">Add to bag +</button></div></div>
+   </article>
+   <article class="product-card glass" data-category="config" data-name="Nova Config Pack">
+    <div class="product-visual visual-blue"><span class="glyph">⌘</span></div>
+    <div class="product-body"><div class="flex items-center justify-between"><h3 class="product-title">Nova Config Pack</h3><span class="text-[9px] text-violet-200">COLLECTION</span></div><p class="product-desc">Curated configuration presets and straightforward installation notes.</p><div class="mt-3 flex gap-2"><span class="meta">Presets</span><span class="meta">Guide</span></div><div class="mt-5 flex items-center justify-between border-t border-white/10 pt-4"><div class="product-price">$7.99 <small class="text-[10px] font-medium text-violet-100/40">CAD</small></div><button class="add btn-purple rounded-xl px-3 py-2.5 text-[10px] font-bold" data-name="Nova Config Pack" data-price="7.99">Add to bag +</button></div></div>
+   </article>
+   <article class="product-card glass" data-category="utility" data-name="Apex Toolkit">
+    <div class="product-visual visual-cyan"><span class="glyph">⌬</span></div>
+    <div class="product-body"><div class="flex items-center justify-between"><h3 class="product-title">Apex Toolkit</h3><span class="text-[9px] text-violet-200">UTILITY</span></div><p class="product-desc">A collection of practical tools and reference material for your gaming setup.</p><div class="mt-3 flex gap-2"><span class="meta">Toolkit</span><span class="meta">Digital</span></div><div class="mt-5 flex items-center justify-between border-t border-white/10 pt-4"><div class="product-price">$11.99 <small class="text-[10px] font-medium text-violet-100/40">CAD</small></div><button class="add btn-purple rounded-xl px-3 py-2.5 text-[10px] font-bold" data-name="Apex Toolkit" data-price="11.99">Add to bag +</button></div></div>
+   </article>
+   <article class="product-card glass" data-category="visual" data-name="Eclipse UI Pack">
+    <div class="product-visual"><span class="glyph">◉</span></div>
+    <div class="product-body"><div class="flex items-center justify-between"><h3 class="product-title">Eclipse UI Pack</h3><span class="text-[9px] text-violet-200">VISUALS</span></div><p class="product-desc">A coordinated interface and theme pack with a quick-start guide.</p><div class="mt-3 flex gap-2"><span class="meta">Themes</span><span class="meta">Digital</span></div><div class="mt-5 flex items-center justify-between border-t border-white/10 pt-4"><div class="product-price">$5.99 <small class="text-[10px] font-medium text-violet-100/40">CAD</small></div><button class="add btn-purple rounded-xl px-3 py-2.5 text-[10px] font-bold" data-name="Eclipse UI Pack" data-price="5.99">Add to bag +</button></div></div>
+   </article>
+   <article class="product-card glass" data-category="config" data-name="Zero Recoil Presets">
+    <div class="product-visual visual-pink"><span class="glyph">⌁</span></div>
+    <div class="product-body"><div class="flex items-center justify-between"><h3 class="product-title">Zero Recoil Presets</h3><span class="text-[9px] text-violet-200">CONFIG</span></div><p class="product-desc">A preset bundle for supported, permitted customization workflows.</p><div class="mt-3 flex gap-2"><span class="meta">Presets</span><span class="meta">Guide</span></div><div class="mt-5 flex items-center justify-between border-t border-white/10 pt-4"><div class="product-price">$8.99 <small class="text-[10px] font-medium text-violet-100/40">CAD</small></div><button class="add btn-purple rounded-xl px-3 py-2.5 text-[10px] font-bold" data-name="Zero Recoil Presets" data-price="8.99">Add to bag +</button></div></div>
+   </article>
+  </div>
+  <p id="empty" class="hidden py-12 text-center text-sm text-violet-100/50">No products match that search.</p>
+ </section>
+ <section id="why" class="glass mb-16 grid gap-6 rounded-3xl p-6 sm:grid-cols-3 sm:p-8">
+  <div><div class="mb-3 text-xl text-violet-200">✧</div><h3 class="text-sm font-bold">Curated releases</h3><p class="mt-2 text-xs leading-6 text-violet-100/55">A focused catalog with clear product details and compatibility information.</p></div>
+  <div><div class="mb-3 text-xl text-violet-200">◈</div><h3 class="text-sm font-bold">Digital products</h3><p class="mt-2 text-xs leading-6 text-violet-100/55">Digital delivery details and setup instructions shown with each listing.</p></div>
+  <div><div class="mb-3 text-xl text-violet-200">⌘</div><h3 class="text-sm font-bold">Support-first</h3><p class="mt-2 text-xs leading-6 text-violet-100/55">A place to find product help, updates, and answers before purchasing.</p></div>
+ </section>
+</main>
+<footer id="support" class="py-7"><div class="shell flex flex-wrap justify-between gap-3"><span>© 2026 reportcheats.com</span><span>Support　·　Terms　·　Privacy</span></div></footer>
+<div id="scrim" class="scrim"></div>
+<aside id="drawer" class="cart-drawer"><div class="flex items-center justify-between"><div><div class="text-lg font-bold">Your bag</div><div class="mt-1 text-[10px] text-violet-100/45">REPORTCHEATS / CHECKOUT</div></div><button id="closeCart" class="pill">✕</button></div><div id="cartLines" class="mt-7 flex-1 overflow-y-auto text-violet-100/80"><p class="text-xs text-violet-100/45">Your bag is empty.</p></div><div class="border-t border-white/15 pt-5"><div class="flex justify-between text-sm font-bold"><span>Total</span><span id="total">$0.00 CAD</span></div><button id="checkout" class="btn-purple mt-5 w-full rounded-xl py-3 text-xs font-bold">Continue to checkout</button><p class="mt-3 text-[10px] leading-5 text-violet-100/40">Demo only: connect a secure payment provider and server before accepting orders.</p></div></aside>
+<script>
+const cart=[];const drawer=document.getElementById('drawer'),scrim=document.getElementById('scrim');
+function openCart(){drawer.classList.add('open');scrim.classList.add('show')}function closeCart(){drawer.classList.remove('open');scrim.classList.remove('show')}
+document.getElementById('openCart').onclick=openCart;document.getElementById('closeCart').onclick=closeCart;scrim.onclick=closeCart;
+function renderCart(){document.getElementById('cartCount').textContent=cart.reduce((s,x)=>s+x.qty,0);document.getElementById('cartLines').innerHTML=cart.length?cart.map((x,i)=>`<div class="cart-line"><div><div class="font-semibold text-white">${x.name}</div><div class="mt-1 text-[10px] text-violet-100/40">$${x.price.toFixed(2)} CAD each</div><div class="mt-2 flex items-center gap-2"><button class="pill !px-2 !py-1" onclick="changeQty(${i},-1)">−</button><span>${x.qty}</span><button class="pill !px-2 !py-1" onclick="changeQty(${i},1)">+</button></div></div><div class="font-semibold">$${(x.price*x.qty).toFixed(2)}</div></div>`).join(''):'<p class="text-xs text-violet-100/45">Your bag is empty.</p>';document.getElementById('total').textContent='$'+cart.reduce((s,x)=>s+x.price*x.qty,0).toFixed(2)+' CAD'}
+function changeQty(i,n){cart[i].qty+=n;if(cart[i].qty<=0)cart.splice(i,1);renderCart()}
+document.querySelectorAll('.add').forEach(b=>b.addEventListener('click',()=>{const found=cart.find(x=>x.name===b.dataset.name);if(found)found.qty++;else cart.push({name:b.dataset.name,price:+b.dataset.price,qty:1});renderCart();openCart();const old=b.textContent;b.textContent='Added ✓';setTimeout(()=>b.textContent=old,900)}));
+document.getElementById('checkout').onclick=()=>alert('This storefront is a front-end demo. Add a secure checkout provider before accepting payments.');
+let active='all';function filterProducts(){const q=document.getElementById('search').value.toLowerCase();let count=0;document.querySelectorAll('.product-card').forEach(p=>{const show=(active==='all'||p.dataset.category===active)&&p.dataset.name.toLowerCase().includes(q);p.style.display=show?'':'none';if(show)count++});document.getElementById('empty').classList.toggle('hidden',count!==0)}
+document.querySelectorAll('.category').forEach(b=>b.onclick=()=>{document.querySelectorAll('.category').forEach(x=>x.classList.remove('active'));b.classList.add('active');active=b.dataset.filter;filterProducts()});document.getElementById('search').addEventListener('input',filterProducts);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCart()});
+</script>
+</body>
+</html>
